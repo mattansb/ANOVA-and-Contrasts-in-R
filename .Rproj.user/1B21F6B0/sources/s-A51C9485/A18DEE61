@@ -5,14 +5,14 @@
     "dirty" : false,
     "encoding" : "ISO-8859-8",
     "folds" : "",
-    "hash" : "0",
+    "hash" : "2874468109",
     "id" : "A18DEE61",
-    "lastKnownWriteTime" : 1525528945,
-    "last_content_update" : 1525528945655,
+    "lastKnownWriteTime" : 1525529023,
+    "last_content_update" : 1525529023179,
     "path" : "~/R/ANOVA-and-Contrasts-in-R/README.Rmd",
     "project_path" : "README.Rmd",
     "properties" : {
-        "cursorPosition" : "25,58",
+        "cursorPosition" : "19,24",
         "ignored_words" : "https,cran,sav,ggplotting,afex,github,singmann,Rmd,emmeans,Kessler,ANOVAs,ChickWeight\n",
         "scrollLine" : "9",
         "tempName" : "Untitled1"
