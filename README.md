@@ -15,8 +15,8 @@ What you'll need to play along
 ==============================
 
 -   These SPSS `.sav` files:
-    -   [ChickWeight.sav](.\data\ChickWeight.sav)
-    -   [anxiety.sav](.\data\anxiety.sav)
+    -   [ChickWeight.sav](data\ChickWeight.sav)
+    -   [anxiety.sav](data\anxiety.sav)
 -   [R](https://cran.r-project.org/)
     -   Optional: [RStudio Desktop](https://www.rstudio.com/)
 -   The following R packages (`install.packages(c("haven","afex","emmeans","tidyverse"))`):
