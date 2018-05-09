@@ -1,17 +1,14 @@
 ---
 title: "ANOVA and Contrasts in R"
-author: "Mattan S. Ben-Shachar"
-date: "Last updated `r Sys.Date()`"
 output: github_document
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
-A joint Berger-Kessler lab meeting (16/5/2018)
+_Last updated `r format(Sys.Date(),'%B %d, %Y')`_
 
 # Programme
 
-I will introduce and demonstrate how to conduct ANOVAs and compute contrasts in R using the afex and emmeans packages.
+In a joint Berger-Kessler lab meeting (May 05, 2018), I will introduce and demonstrate how to conduct ANOVAs and compute contrasts (including interaction contrasts) in R using the afex and emmeans packages.
 
 # What you'll need to play along
 

@@ -1,15 +1,13 @@
 ANOVA and Contrasts in R
 ================
-Mattan S. Ben-Shachar
-Last updated 2018-05-05
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-A joint Berger-Kessler lab meeting (16/5/2018)
+*Last updated May 09, 2018*
 
 Programme
 =========
 
-I will introduce and demonstrate how to conduct ANOVAs and compute contrasts in R using the afex and emmeans packages.
+In a joint Berger-Kessler lab meeting (May 05, 2018), I will introduce and demonstrate how to conduct ANOVAs and compute contrasts (including interaction contrasts) in R using the afex and emmeans packages.
 
 What you'll need to play along
 ==============================
