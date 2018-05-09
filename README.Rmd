@@ -25,11 +25,9 @@ In a joint Berger-Kessler lab meeting (May 16, 2018), I will introduce and demon
 
 # Reading Materials
 
-The following vignettes are the basis of the demo:
-  - [ANOVA with afex](https://github.com/singmann/afex/blob/master/vignettes/afex_anova_example.Rmd)
-  - Contrasts with emmeans:
-    - [Contrasts](https://cran.r-project.org/web/packages/emmeans/vignettes/comparisons.html)
-    - [Interactions](https://cran.r-project.org/web/packages/emmeans/vignettes/interactions.html)
+The following vignettes are the basis of the demo:  
+  - [ANOVA with afex](https://github.com/singmann/afex/blob/master/vignettes/afex_anova_example.Rmd)  
+  - [Contrasts](https://cran.r-project.org/web/packages/emmeans/vignettes/comparisons.html) and [interaction contrasts](https://cran.r-project.org/web/packages/emmeans/vignettes/interactions.html) with emmeans.  
 
 # The Demo
 
