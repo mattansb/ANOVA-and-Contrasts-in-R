@@ -17,11 +17,21 @@ In a joint Berger-Kessler lab meeting (May 16, 2018), I will introduce and demon
 	  - [anxiety.sav](data/anxiety.sav)
   - [R](https://cran.r-project.org/)
     - Optional: [RStudio Desktop](https://www.rstudio.com/)
-  - The following R packages (`install.packages(c("haven","afex","emmeans","tidyverse"))`):  
+  - The following R packages:  
     - `haven` (for importing SPSS sav files) 
     - `tidyverse` (for data manipulation and ggplotting)
     - `afex` (version 0.20-0 at least) (for running ANOVA)
     - `emmeans` (for contrasts and simple slopes)  
+    - `marginC` (my mini-package for setting contrasts with marginal weights).
+
+Install these packages by running in the R command line:
+```{r, eval=FALSE}
+install.packages(c("haven","afex","emmeans","tidyverse"))
+
+# install.packages("devtools")
+devtools::install_github("mattansb/marginC")
+```
+
 
 # Reading Materials
 

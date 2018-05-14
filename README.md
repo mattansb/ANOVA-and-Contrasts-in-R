@@ -2,7 +2,7 @@ ANOVA and Contrasts in R
 ================
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-*Last updated May 09, 2018*
+*Last updated May 14, 2018*
 
 Programme
 =========
@@ -17,11 +17,21 @@ What you'll need to play along
     -   [anxiety.sav](data/anxiety.sav)
 -   [R](https://cran.r-project.org/)
     -   Optional: [RStudio Desktop](https://www.rstudio.com/)
--   The following R packages (`install.packages(c("haven","afex","emmeans","tidyverse"))`):
+-   The following R packages:
     -   `haven` (for importing SPSS sav files)
     -   `tidyverse` (for data manipulation and ggplotting)
     -   `afex` (version 0.20-0 at least) (for running ANOVA)
     -   `emmeans` (for contrasts and simple slopes)
+    -   `marginC` (my mini-package for setting contrasts with marginal weights).
+
+Install these packages by running in the R command line:
+
+``` r
+install.packages(c("haven","afex","emmeans","tidyverse"))
+
+# install.packages("devtools")
+devtools::install_github("mattansb/marginC")
+```
 
 Reading Materials
 =================
