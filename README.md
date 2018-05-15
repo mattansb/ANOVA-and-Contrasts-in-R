@@ -2,7 +2,7 @@ ANOVA and Contrasts in R
 ================
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-*Last updated May 14, 2018*
+*Last updated May 15, 2018*
 
 Programme
 =========
@@ -43,4 +43,7 @@ The following vignettes are the basis of the demo:
 The Demo
 ========
 
-After the lab meeting, the code used will be available in this repository as well.
+The demo (code is available in the `code` folder) consists of two parts:
+
+1.  Running Anovas and analyzing effects and interactions with contrasts (planned and post-hoc).
+2.  Analyzing regression interactions.

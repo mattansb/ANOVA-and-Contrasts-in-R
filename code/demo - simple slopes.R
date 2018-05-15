@@ -1,5 +1,13 @@
 # Import data -------------------------------------------------------------
 
+# The data in anxiety is from a hypothetical correlational design, where anxiety,
+# depression and sex can be used to predict some outcome.
+# The sav file has the following variables:
+#   anxiety - score between 0-60 of anxiety symptoms.
+#   depression - score between 0-40 of depression symptoms.
+#   sex - 1 = male, 2 = female
+#   outcome - score between 0-35 of some outcome
+
 library(tidyverse)
 library(haven)
 

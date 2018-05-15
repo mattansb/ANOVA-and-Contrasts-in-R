@@ -3,6 +3,14 @@ library(tidyverse)
 
 # Import data -------------------------------------------------------------
 
+# ChickWeight data describes a mixed design: a group of 45 chickens were split
+# into 4 groups, each group was given a different diet. Each chick was weighed
+# at 6 time points (4 week intervals).
+# The sav file has the following variables:
+#   Chick - the chich ID
+#   Diet - 1-4 the Diet number, with 1 being the standard diet.
+#   T0:T20 - weigts at each of the 6 time points.
+
 library(haven)
 
 # import wide format
@@ -10,7 +18,7 @@ df_wide <- read_spss("data/ChickWeight.sav")
 
 head(df_wide)
 
-# make long
+# make wide data long
 df_long <- df_wide %>% 
   gather("Time","weight",T0:T20)
 
