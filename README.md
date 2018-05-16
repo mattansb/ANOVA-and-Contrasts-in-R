@@ -2,7 +2,7 @@ ANOVA and Contrasts in R
 ================
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-*Last updated May 15, 2018*
+*Last updated May 16, 2018*
 
 Programme
 =========
@@ -38,7 +38,8 @@ Reading Materials
 
 The following vignettes are the basis of the demo:
 - [ANOVA with afex](https://github.com/singmann/afex/blob/master/vignettes/afex_anova_example.Rmd)
-- [Contrasts](https://cran.r-project.org/web/packages/emmeans/vignettes/comparisons.html) and [interaction contrasts](https://cran.r-project.org/web/packages/emmeans/vignettes/interactions.html) with emmeans.
+- [Contrasts](https://cran.r-project.org/web/packages/emmeans/vignettes/comparisons.html) and [interaction contrasts](l), and [more](https://cran.r-project.org/web/packages/emmeans/vignettes/confidence-intervals.html) with emmeans.
+- The `marginC` [README](https://github.com/mattansb/marginC).
 
 The Demo
 ========
