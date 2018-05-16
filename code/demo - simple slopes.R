@@ -13,13 +13,15 @@ library(haven)
 
 # import data
 df_outcome <- read_spss("data/anxiety.sav") %>% 
-  mutate(sex = factor(sex,labels = c("M","F")))
+  mutate(sex = factor(sex,labels = c("M","F")),
+         anxiety = scale(anxiety))
 
 
 # Interaction with binary var ---------------------------------------------
+library(lm.beta)
 
 fit_1 <- lm(outcome ~ anxiety+sex, df_outcome)
-summary(fit_1)
+summary(lm.beta(fit_1))
 
 fit_2 <- lm(outcome ~ anxiety*sex, df_outcome)
 summary(fit_2)
@@ -32,9 +34,11 @@ anova(fit_1,fit_2)
 library(emmeans)
 
 rg <- emtrends(fit_2, ~sex, var = "anxiety")
+rg
 
 emmip(rg,~sex, CIs = TRUE)
 contrast(rg,"pairwise")
+test(rg)
 
 
 
@@ -60,15 +64,13 @@ anova(fit_1,fit_2)
 
 # Simple slopes ----
 rg <- emtrends(fit_2, ~depression, var = "anxiety")
+rg
 
 
 rg <- emtrends(fit_2, ~depression, var = "anxiety", at = list(depression = c(10,30)))
+rg
 emmip(rg,~depression, CIs = TRUE)
 contrast(rg,"pairwise")
+test(rg)
 
-emmeans(fit_2, ~depression*anxiety, at = list(depression = c(10,30),
-                                              anxiety = c(7,20))) %>% 
-  emmip(depression~anxiety)
-
-readRDS("data/sample_plot.Rds")
 

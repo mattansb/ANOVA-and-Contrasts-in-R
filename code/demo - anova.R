@@ -13,8 +13,10 @@ library(tidyverse)
 
 library(haven)
 
+fname <- choose.files()
+
 # import wide format
-df_wide <- read_spss("data/ChickWeight.sav")
+df_wide <- read_spss(fname)
 
 head(df_wide)
 
@@ -40,7 +42,7 @@ library(afex)
 # fit using `aov_ez`
 
 fit <- aov_ez(id = "Chick", dv = "weight", data = df_long,
-              between = "Diet", within = "Time")
+              between = c("Diet"), within = "Time")
 fit
 
 
@@ -83,7 +85,7 @@ rg
 
 # make basic plot with `emmip`
 emmip(rg, ~Time)
-emmip(rg, ~Time, CIs = T)
+emmip(rg, ~Time, CIs = TRUE)
 
 
 
@@ -96,7 +98,7 @@ contrast(rg, "consec", adjust = "none")
 
 
 my_weights <- list(half_time = c(-1,-1,-1,1,1,1),
-                   start_end = c(-1,-0,-0,0,0,1))
+                   start_end = c(-1,0,0,0,0,1))
 contrast(rg, my_weights)
 
 
@@ -139,12 +141,13 @@ library(marginC)
 my_weights <- list(half_time_1_vs_all = mw(Diet = c(-3,1,1,1), Time = c(-1,-1,-1,1,1,1)))
 my_weights
 
-contrast(rg, list(at_T20 = my_weights))
+contrast(rg, my_weights)
 
 
 
 # simple effects' contrasts
-my_weights <- list(first_vs_2_3 = mw(Diet = c(-2,1,1,0)))
+my_weights <- list(first_vs_2_3 = mw(Diet = c(-2,1,1,0)),
+                   first_vs_all = mw(Diet = c(-3,1,1,1)))
 my_weights
 
 contrast(rg, my_weights, by = 'Time')
