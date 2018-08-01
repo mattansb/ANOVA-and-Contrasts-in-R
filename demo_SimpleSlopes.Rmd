@@ -1,13 +1,23 @@
-# Import data -------------------------------------------------------------
+---
+title: "Simple slopes"
+output: github_document
+---
 
-# The data in anxiety is from a hypothetical correlational design, where anxiety,
-# depression and sex can be used to predict some outcome.
-# The sav file has the following variables:
-#   anxiety - score between 0-60 of anxiety symptoms.
-#   depression - score between 0-40 of depression symptoms.
-#   sex - 1 = male, 2 = female
-#   outcome - score between 0-35 of some outcome
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.path = 'doc/')
+```
 
+## Import data
+
+The data in anxiety is from a hypothetical correlational design, where anxiety, depression and sex can be used to predict some outcome.  
+The sav file has the following variables:  
+
+- anxiety - score between 0-60 of anxiety symptoms.
+- depression - score between 0-40 of depression symptoms.
+- sex - 1 = male, 2 = female
+- outcome - score between 0-35 of some outcome
+
+```{r}
 library(tidyverse)
 library(haven)
 
@@ -15,10 +25,13 @@ library(haven)
 df_outcome <- read_spss("data/anxiety.sav") %>% 
   mutate(sex = factor(sex,labels = c("M","F")),
          anxiety = scale(anxiety))
+```
 
 
-# Interaction with binary var ---------------------------------------------
-library(lm.beta)
+## Interaction with binary var
+
+```{r}
+library(lm.beta) # for standerdized coeffs
 
 fit_1 <- lm(outcome ~ anxiety+sex, df_outcome)
 summary(lm.beta(fit_1))
@@ -39,20 +52,11 @@ rg
 emmip(rg,~sex, CIs = TRUE)
 contrast(rg,"pairwise")
 test(rg)
+```
 
+## Interaction with continous var
 
-
-
-
-
-
-
-
-
-
-
-# Interaction with continous var ------------------------------------------
-
+```{r}
 fit_1 <- lm(outcome ~ anxiety+depression, df_outcome)
 summary(fit_1)
 
@@ -72,5 +76,6 @@ rg
 emmip(rg,~depression, CIs = TRUE)
 contrast(rg,"pairwise")
 test(rg)
+```
 
 
