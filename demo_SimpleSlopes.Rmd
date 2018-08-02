@@ -4,7 +4,7 @@ output: github_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, fig.path = 'doc/')
+knitr::opts_chunk$set(echo = TRUE, fig.path = 'doc/', warning=FALSE)
 ```
 
 ## Import data
@@ -17,7 +17,7 @@ The sav file has the following variables:
 - sex - 1 = male, 2 = female
 - outcome - score between 0-35 of some outcome
 
-```{r}
+```{r, message=FALSE}
 library(tidyverse)
 library(haven)
 

@@ -22,10 +22,11 @@ In a joint Berger-Kessler lab meeting (May 16, 2018), I will introduce and demon
     - `tidyverse` (for data manipulation and ggplotting)
     - `afex` (version 0.20-0 at least) (for running ANOVA)
     - `emmeans` (for contrasts and simple slopes)  
+    - `lm.beta` (for standardized regression coefficients)
 
 Install these packages by running in the R command line:
 ```R
-install.packages(c("haven","afex","emmeans","tidyverse"))
+install.packages(c("haven","afex","emmeans","tidyverse","lm.beta"))
 ```
 
 
@@ -33,7 +34,7 @@ install.packages(c("haven","afex","emmeans","tidyverse"))
 
 The following vignettes are the basis of the demo:  
   - [ANOVA with afex](https://github.com/singmann/afex/blob/master/vignettes/afex_anova_example.Rmd)  
-  - [Contrasts](https://cran.r-project.org/web/packages/emmeans/vignettes/comparisons.html) and [interaction contrasts](l), and [more](https://cran.r-project.org/web/packages/emmeans/vignettes/confidence-intervals.html) with emmeans. 
+  - [Contrasts](https://cran.r-project.org/web/packages/emmeans/vignettes/comparisons.html) and [interaction contrasts](https://cran.r-project.org/web/packages/emmeans/vignettes/interactions.html), and [more](https://cran.r-project.org/web/packages/emmeans/vignettes/confidence-intervals.html) with emmeans. 
 
 # The Demo
 

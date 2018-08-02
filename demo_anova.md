@@ -13,11 +13,7 @@ The sav file has the following variables:
 
 ``` r
 library(haven)
-```
 
-    ## Warning: package 'haven' was built under R version 3.5.1
-
-``` r
 # import wide format
 df_wide <- read_spss('data/ChickWeight.sav')
 
@@ -38,20 +34,7 @@ We need the data in the long format:
 
 ``` r
 library(tidyverse)
-```
 
-    ## -- Attaching packages ------------------------------------------------------------------- tidyverse 1.2.1 --
-
-    ## v ggplot2 3.0.0     v purrr   0.2.5
-    ## v tibble  1.4.2     v dplyr   0.7.6
-    ## v tidyr   0.8.1     v stringr 1.3.1
-    ## v readr   1.1.1     v forcats 0.3.0
-
-    ## -- Conflicts ---------------------------------------------------------------------- tidyverse_conflicts() --
-    ## x dplyr::filter() masks stats::filter()
-    ## x dplyr::lag()    masks stats::lag()
-
-``` r
 df_long <- df_wide %>% 
   gather("Time","weight",T0:T20)
 
@@ -76,51 +59,10 @@ We will fit a mixed-anova model with `afex`:
 
 ``` r
 library(afex)
-```
 
-    ## Loading required package: lme4
-
-    ## Loading required package: Matrix
-
-    ## 
-    ## Attaching package: 'Matrix'
-
-    ## The following object is masked from 'package:tidyr':
-    ## 
-    ##     expand
-
-    ## Loading required package: emmeans
-
-    ## ************
-    ## Welcome to afex. For support visit: http://afex.singmann.science/
-
-    ## - Functions for ANOVAs: aov_car(), aov_ez(), and aov_4()
-    ## - Methods for calculating p-values with mixed(): 'KR', 'S', 'LRT', and 'PB'
-    ## - 'afex_aov' and 'mixed' objects can be passed to emmeans() for follow-up tests
-    ## - Get and set global package options with: afex_options()
-    ## - Set orthogonal sum-to-zero contrasts globally: set_sum_contrasts()
-    ## - For example analyses see: browseVignettes("afex")
-    ## ************
-
-    ## 
-    ## Attaching package: 'afex'
-
-    ## The following object is masked from 'package:lme4':
-    ## 
-    ##     lmer
-
-``` r
 # fit using `aov_ez`
-
 fit <- aov_ez(id = "Chick", dv = "weight", data = df_long,
               between = c("Diet"), within = "Time")
-```
-
-    ## Converting to factor: Diet
-
-    ## Contrasts set to contr.sum for the following variables: Diet
-
-``` r
 fit
 ```
 
@@ -142,13 +84,6 @@ We can change some of the defults, such as *η*<sub>2</sub><sup>2</sup> for effe
 fit <- aov_ez(id = "Chick", dv = "weight", data = df_long,
               between = "Diet", within = "Time",
               anova_table = list(es = "pes", correction = "none"))
-```
-
-    ## Converting to factor: Diet
-
-    ## Contrasts set to contr.sum for the following variables: Diet
-
-``` r
 fit
 ```
 

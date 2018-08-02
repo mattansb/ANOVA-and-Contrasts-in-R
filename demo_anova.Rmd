@@ -4,7 +4,7 @@ output: github_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, fig.path = 'doc/')
+knitr::opts_chunk$set(echo = TRUE, fig.path = 'doc/', warning=FALSE)
 ```
 
 ## Import data
@@ -27,7 +27,7 @@ head(df_wide)
 
 We need the data in the long format:
 
-```{r}
+```{r, message=FALSE}
 library(tidyverse)
 
 df_long <- df_wide %>% 
@@ -41,11 +41,10 @@ head(df_long)
 
 We will fit a mixed-anova model with `afex`:
 
-```{r}
+```{r, message=FALSE}
 library(afex)
 
 # fit using `aov_ez`
-
 fit <- aov_ez(id = "Chick", dv = "weight", data = df_long,
               between = c("Diet"), within = "Time")
 fit
@@ -53,7 +52,7 @@ fit
 
 We can change some of the defults, such as $\eta^2_2$ for effect-sizes, and not correcting for GG:
 
-```{r}
+```{r, message=FALSE}
 fit <- aov_ez(id = "Chick", dv = "weight", data = df_long,
               between = "Diet", within = "Time",
               anova_table = list(es = "pes", correction = "none"))
