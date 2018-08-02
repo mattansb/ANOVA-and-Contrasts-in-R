@@ -2,7 +2,7 @@ ANOVA and Contrasts in R
 ================
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-*Last updated August 01, 2018*
+*Last updated August 02, 2018*
 
 Programme
 =========
@@ -22,11 +22,12 @@ What you'll need to play along
     -   `tidyverse` (for data manipulation and ggplotting)
     -   `afex` (version 0.20-0 at least) (for running ANOVA)
     -   `emmeans` (for contrasts and simple slopes)
+    -   `lm.beta` (for standardized regression coefficients)
 
 Install these packages by running in the R command line:
 
 ``` r
-install.packages(c("haven","afex","emmeans","tidyverse"))
+install.packages(c("haven","afex","emmeans","tidyverse","lm.beta"))
 ```
 
 Reading Materials
@@ -34,7 +35,7 @@ Reading Materials
 
 The following vignettes are the basis of the demo:
 - [ANOVA with afex](https://github.com/singmann/afex/blob/master/vignettes/afex_anova_example.Rmd)
-- [Contrasts](https://cran.r-project.org/web/packages/emmeans/vignettes/comparisons.html) and [interaction contrasts](l), and [more](https://cran.r-project.org/web/packages/emmeans/vignettes/confidence-intervals.html) with emmeans.
+- [Contrasts](https://cran.r-project.org/web/packages/emmeans/vignettes/comparisons.html) and [interaction contrasts](https://cran.r-project.org/web/packages/emmeans/vignettes/interactions.html), and [more](https://cran.r-project.org/web/packages/emmeans/vignettes/confidence-intervals.html) with emmeans.
 
 The Demo
 ========
