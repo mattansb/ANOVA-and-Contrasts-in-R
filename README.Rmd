@@ -33,7 +33,7 @@ install.packages(c("haven","afex","emmeans","tidyverse","lm.beta"))
 # Reading Materials
 
 The following vignettes are the basis of the demo:  
-  - [ANOVA with afex](https://github.com/singmann/afex/blob/master/vignettes/afex_anova_example.Rmd)  
+  - [ANOVA with afex](https://cran.r-project.org/web/packages/afex/vignettes/afex_anova_example.html)  
   - [Contrasts](https://cran.r-project.org/web/packages/emmeans/vignettes/comparisons.html) and [interaction contrasts](https://cran.r-project.org/web/packages/emmeans/vignettes/interactions.html), and [more](https://cran.r-project.org/web/packages/emmeans/vignettes/confidence-intervals.html) with emmeans. 
 
 # The Demo
