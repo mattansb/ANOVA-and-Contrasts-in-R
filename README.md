@@ -7,7 +7,7 @@ ANOVA and Contrasts in R
 
 # Programme
 
-In a joint Berger-Kessler lab meeting (May 16, 2018), I will introduce
+In this workshop (May 16, 2018), I will introduce
 and demonstrate how to conduct ANOVAs and compute contrasts (including
 interaction contrasts) in R using the afex and emmeans packages.
 
